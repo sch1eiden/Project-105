@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Timer
+comment1.params=
+comment1.target=Timer()
+comment2.params=prefix
+comment2.target=Timer(java.lang.String)
+comment2.text=\r\n\ Create\ a\ new\ counter,\ initialised\ to\ 0.\r\n
+comment3.params=prefix\ seconds
+comment3.target=Timer(java.lang.String,\ int)
+comment4.params=
+comment4.target=SimpleTimer\ getTimer()
+comment5.params=
+comment5.target=void\ act()
+comment5.text=\r\n\ Animate\ the\ display\ to\ show\ the\ timer\ in\ mm\:ss\ format.\r\n
+comment6.params=prefix
+comment6.target=void\ setPrefix(java.lang.String)
+comment6.text=\r\n\ Sets\ a\ text\ prefix\ that\ should\ be\ displayed\ before\r\n\ the\ counter\ value\ (e.g.\ "Score\:\ ").\r\n
+comment7.params=
+comment7.target=void\ updateImage()
+comment7.text=\r\n\ Update\ the\ image\ on\ screen\ to\ show\ the\ current\ value.\r\n
+comment8.params=
+comment8.target=int\ getSeconds()
+comment9.params=num
+comment9.target=java.lang.String\ numWithZeroPrefix(int)
+numComments=10
