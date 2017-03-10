@@ -9,12 +9,24 @@ import java.util.List;
  */
 public class Car extends Actor
 {
+    boolean end = false;
+    
     /**
      * Act - do whatever the Car wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
+        if(end)
+            return;
+            
+        TimedWorld world = (TimedWorld)getWorld();
+        
+        if(world.timer.secondsLeft <= 0) {
+            end = true;
+            world.addObject(new ScoreBoard(world.counter.getValue()), world.getWidth()/2, world.getHeight()/2);
+        }
+        
         if(Greenfoot.isKeyDown("up")){
             move(2);
             if(Greenfoot.isKeyDown("left")){
@@ -33,17 +45,18 @@ public class Car extends Actor
                 turn(2);
             }
         }
+        
         if(isTouching(Star.class)){
             List<Star> stars = this.getIntersectingObjects(Star.class);
             for(Star star : stars) {
-                getWorld().removeObject(star);
-                ((TimedWorld)getWorld()).addScore();
+               world.removeObject(star);
+               world.addScore();
             }
         }
         
-        if(isTouching(IWall.class)) {
-            Greenfoot.stop();
-            // game over
+        if(isTouching(IWall.class) || isTouching(Bush.class)) {
+            end = true;
+            world.addObject(new ScoreBoard(world.counter.getValue()), world.getWidth()/2, world.getHeight()/2);
         }
     }
 }

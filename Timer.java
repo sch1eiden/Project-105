@@ -8,7 +8,7 @@ public class Timer extends Actor
     private GreenfootImage background;
     private int value;
     private int target;
-    private int secondsLeft;
+    public int secondsLeft;
     private String prefix;
     
     public Timer()
