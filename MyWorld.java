@@ -17,7 +17,18 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1280, 720, 1); 
-        addObject(new Go(), 617,592);
-        
+        addObject(new Go(), 666,530);
+
+        prepare();
+    }
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        Title title = new Title();
+        addObject(title,672,169);
     }
 }

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class game1 extends TimedWorld
 {
-    
+
     /**
      * Constructor for objects of class game1.
      * 
@@ -52,13 +52,32 @@ public class game1 extends TimedWorld
         addObject(new Bush(), 254,632);
         addObject(new Car(), 573,108);
         addObject(timer, 940, 20);
-        
-  
-        
-        
+
+        prepare();
     }
-    
+
     public void act(){
-        
+
+    }
+
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        WallV wallv5 = new WallV();
+        addObject(wallv5,905,89);
+        wallv5.setLocation(897,90);
+        WallV wallv6 = new WallV();
+        addObject(wallv6,772,88);
+        wallv6.setLocation(774,81);
+        wallv5.setLocation(902,81);
+        Wall wall9 = new Wall();
+        addObject(wall9,84,160);
+        wall9.setLocation(78,160);
+        WallV wallv7 = new WallV();
+        addObject(wallv7,238,88);
+        wallv7.setLocation(238,83);
     }
 }
