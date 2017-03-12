@@ -162,5 +162,11 @@ public class game2 extends TimedWorld
         wallv17.setLocation(754,149);
         wallv16.setLocation(593,150);
         wallv15.setLocation(433,151);
+        Reset3 reset3 = new Reset3();
+        addObject(reset3,724,24);
+        reset3.setLocation(707,21);
+        Reset2 reset22 = new Reset2();
+        addObject(reset22,703,28);
+        reset22.setLocation(712,20);
     }
 }

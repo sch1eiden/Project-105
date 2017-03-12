@@ -134,5 +134,8 @@ public class game3 extends TimedWorld
         addObject(wallv14,438,747);
         Wall wall16 = new Wall();
         addObject(wall16,507,676);
+
+        Reset3 reset3 = new Reset3();
+        addObject(reset3,712,23);
     }
 }

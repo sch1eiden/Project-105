@@ -145,5 +145,12 @@ public class game1 extends TimedWorld
         bush3.turn(180);
         bush3.setLocation(774,276);
         car.setLocation(185,655);
+        Reset reset = new Reset();
+        addObject(reset,707,28);
+        reset.setLocation(713,23);
+        removeObject(reset);
+        Reset reset2 = new Reset();
+        addObject(reset2,711,24);
+        reset2.setLocation(709,20);
     }
 }
