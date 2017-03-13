@@ -16,7 +16,7 @@ public class game3 extends TimedWorld
     public game3()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(60);
+        super(120);
 
         prepare();
     }
