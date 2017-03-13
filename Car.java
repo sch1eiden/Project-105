@@ -50,11 +50,13 @@ public class Car extends Actor
             List<Star> stars = this.getIntersectingObjects(Star.class);
             for(Star star : stars) {
                world.removeObject(star);
+               Greenfoot.playSound("wink.mp3");
                world.addScore();
             }
         }
         
         if(isTouching(IWall.class) || isTouching(Bush.class)) {
+            Greenfoot.playSound("Bomb.mp3");
             end = true;
             world.addObject(new ScoreBoard(world.counter.getValue()), world.getWidth()/2, world.getHeight()/2);
         }
