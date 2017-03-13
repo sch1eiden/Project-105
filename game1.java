@@ -24,6 +24,10 @@ public class game1 extends TimedWorld
     }
 
     public void act(){
+        if(getObjects(Star.class).isEmpty()){
+            addObject(new ScoreBoard(getScore()),getWidth()/2,getHeight()/2);
+            Greenfoot.stop();
+        }
 
     }
 

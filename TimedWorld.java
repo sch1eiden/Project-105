@@ -27,4 +27,8 @@ public class TimedWorld extends World
     public void addScore() {
         counter.add(1);
     }
+    
+    public int getScore(){
+     return counter.getValue();
+    }
 }

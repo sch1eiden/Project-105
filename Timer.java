@@ -68,7 +68,7 @@ public class Timer extends Actor
         String strText;
         int sec = secondsLeft;
         int min = secondsLeft/  60;
-        GreenfootImage text = new GreenfootImage(prefix + numWithZeroPrefix(min) + ":" + numWithZeroPrefix(sec), 22, Color.BLACK, transparent);
+        GreenfootImage text = new GreenfootImage(prefix + numWithZeroPrefix(min) + ":" + numWithZeroPrefix(sec%60), 22, Color.BLACK, transparent);
         
         if (text.getWidth() > image.getWidth() - 20)
         {

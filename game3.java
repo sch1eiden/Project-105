@@ -20,6 +20,13 @@ public class game3 extends TimedWorld
 
         prepare();
     }
+    
+    public void act(){
+        if(getObjects(Star.class).isEmpty()){
+            addObject(new ScoreBoard(getScore()),getWidth()/2,getHeight()/2);
+            Greenfoot.stop();
+        }
+    }
 
     /**
      * Prepare the world for the start of the program.

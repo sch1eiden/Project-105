@@ -24,6 +24,13 @@ public class game2 extends TimedWorld
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
+    public void act(){
+        if(getObjects(Star.class).isEmpty()){
+            addObject(new ScoreBoard(getScore()),getWidth()/2,getHeight()/2);
+            Greenfoot.stop();
+        }
+    }
+    
     private void prepare()
     {
         Wall wall = new Wall();
