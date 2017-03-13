@@ -175,5 +175,7 @@ public class game2 extends TimedWorld
         Reset2 reset22 = new Reset2();
         addObject(reset22,703,28);
         reset22.setLocation(712,20);
+        Home home2 = new Home();
+        addObject(home2,661,26);
     }
 }

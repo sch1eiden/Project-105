@@ -144,5 +144,8 @@ public class game3 extends TimedWorld
 
         Reset3 reset3 = new Reset3();
         addObject(reset3,712,23);
+        Home home = new Home();
+        addObject(home,655,27);
+        home.setLocation(650,23);
     }
 }
