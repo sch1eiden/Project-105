@@ -15,6 +15,7 @@ public class Easy extends Actor
     public void act() 
     {
         if(Greenfoot.mouseClicked(this)){
+             Greenfoot.playSound("click_one.wav");
         Greenfoot.setWorld(new game1());
     }
     }    
