@@ -70,6 +70,7 @@ public class Car extends Actor
             setImage("car1.png");
             repic = 0;
         }
+        
     }
     public void useitem(){
         skill++;
