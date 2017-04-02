@@ -18,6 +18,7 @@ public class game2 extends TimedWorld
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(120);
         prepare();
+        addObject(new item(),48,45);
     }
 
     /**

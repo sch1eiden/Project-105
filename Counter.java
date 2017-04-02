@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.*;
+import javax.swing.*;
 
 /**
  * A Counter class that allows you to display a numerical value on screen.
@@ -33,7 +34,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Counter extends Actor
 {
-    private static final Color transparent = new Color(0,0,0,0);
+    private static final greenfoot.Color transparent = new greenfoot.Color(0,0,0,0);
     private GreenfootImage background;
     private int value;
     private int target;
@@ -114,7 +115,7 @@ public class Counter extends Actor
     private void updateImage()
     {
         GreenfootImage image = new GreenfootImage(background);
-        GreenfootImage text = new GreenfootImage(prefix + value, 22, Color.BLACK, transparent);
+        GreenfootImage text = new GreenfootImage(prefix + value, 22, greenfoot.Color.BLACK, transparent);
         
         if (text.getWidth() > image.getWidth() - 20)
         {

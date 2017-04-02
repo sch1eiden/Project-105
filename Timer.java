@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.awt.*;
+import javax.swing.*;
+import java.util.*;
 
 public class Timer extends Actor
 {
     private SimpleTimer timer;
-    private static final Color transparent = new Color(0,0,0,0);
+    private static final greenfoot.Color transparent = new greenfoot.Color(0,0,0,0);
     private GreenfootImage background;
     private int value;
     private int target;
@@ -68,7 +70,7 @@ public class Timer extends Actor
         String strText;
         int sec = secondsLeft;
         int min = secondsLeft/  60;
-        GreenfootImage text = new GreenfootImage(prefix + numWithZeroPrefix(min) + ":" + numWithZeroPrefix(sec%60), 22, Color.BLACK, transparent);
+        GreenfootImage text = new GreenfootImage(prefix + numWithZeroPrefix(min) + ":" + numWithZeroPrefix(sec%60), 22, greenfoot.Color.BLACK, transparent);
         
         if (text.getWidth() > image.getWidth() - 20)
         {

@@ -10,7 +10,7 @@ public class TimedWorld extends World
 {
     public Timer timer;
     public Counter counter = new Counter("Score : ");
-    
+    public static int check =0;
     /**
      * Constructor for objects of class TimedWorld.
      * 
@@ -30,5 +30,8 @@ public class TimedWorld extends World
     
     public int getScore(){
      return counter.getValue();
+    }
+    public void act(){
+        check++;
     }
 }

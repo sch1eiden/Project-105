@@ -21,6 +21,7 @@ public class game1 extends TimedWorld
         addObject(timer, 940, 20);
 
         prepare();
+        addObject(new item(),48,45);
     }
 
     public void act(){

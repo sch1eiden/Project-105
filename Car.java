@@ -10,7 +10,9 @@ import java.util.List;
 public class Car extends Actor
 {
     boolean end = false;
-    
+    boolean check = false;
+    int skill = 7200;
+    int repic = 0;
     /**
      * Act - do whatever the Car wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -42,6 +44,7 @@ public class Car extends Actor
                 turn(-2);
             }
             if(Greenfoot.isKeyDown("right")){
+                
                 turn(2);
             }
         }
@@ -60,5 +63,22 @@ public class Car extends Actor
             end = true;
             world.addObject(new ScoreBoard(world.counter.getValue()), world.getWidth()/2, world.getHeight()/2);
         }
+        useitem();
+        
+        repic++;
+        if(repic>=300){
+            setImage("car1.png");
+            repic = 0;
+        }
+    }
+    public void useitem(){
+        skill++;
+        if(skill>=7200){
+            if(Greenfoot.isKeyDown("z")){
+                setImage("car mini.png");
+                skill=0;
+            }  
+        } 
+        
     }
 }
