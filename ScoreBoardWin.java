@@ -23,7 +23,7 @@ public class ScoreBoardWin extends Actor
     public ScoreBoardWin()
     {
         this(100);
-        
+        getWorld().addObject(new Name(),50,50);
     }
 
     /**
@@ -31,7 +31,7 @@ public class ScoreBoardWin extends Actor
      */
     public ScoreBoardWin(int score)
     {
-        makeImage("You win", "Score: ", score);
+        makeImage( "You win  ",MyWorld.name+"  Score: ", score);
     }
     
 

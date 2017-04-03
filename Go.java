@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import javax.swing.JOptionPane;
 /**
  * Write a description of class Go here.
  * 
@@ -16,6 +16,7 @@ public class Go extends Actor
     {
     if(Greenfoot.mouseClicked(this)){
          Greenfoot.playSound("click_one.wav");
+          MyWorld.name=JOptionPane.showInputDialog("Name : ");
         Greenfoot.setWorld(new instruc());
     }
 }

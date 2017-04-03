@@ -23,15 +23,15 @@ public class ScoreBoard extends Actor
     public ScoreBoard()
     {
         this(100);
-        
+        getWorld().addObject(new Name(),50,50);
     }
 
     /**
      * Create a score board for the final result.
      */
-    public ScoreBoard(int score)
+public ScoreBoard(int score)
     {
-        makeImage("Game Over", "Score: ", score);
+    makeImage("GAMEOVER " ,MyWorld.name + "  Score: ", score);
     }
     
 
