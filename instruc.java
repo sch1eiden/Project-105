@@ -17,7 +17,7 @@ public class instruc extends World
     public instruc()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1080, 760, 1);
+        super(1280, 720, 1);
         showText("CAR MANIA",getWidth()/2,getHeight()/2);
         showText("Instruction: You have to collect the star and avoid touching the grass and bush",getWidth()/2,(getHeight()/2)+20);
         showText("GOOD LUCK!!!!!!",getWidth()/2,(getHeight()/2)+60);
@@ -30,7 +30,9 @@ public class instruc extends World
      */
     private void prepare()
     {
+
         Gon gon = new Gon();
-        addObject(gon,574,618);
+        addObject(gon,649,599);
+        gon.setLocation(655,581);
     }
 }
